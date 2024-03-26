@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  <!-- fontawesome link -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <title>Document</title>
+</head>
+
+<body style="background-color: rgb(244, 250, 250); margin: 0px; padding: 0px;">
+
+  <div class="loader">
+    <div class="circle">
+
+    </div>
+  </div>
+  <div class="loading"></div>
+
+
+  <!-- Start header section -->
+  <header id="aa-header">
+    <!-- start header top  -->
+    <div class="aa-header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-header-top-area">
+              <!-- start header top left -->
+              <div class="aa-header-top-left">
+
+                <!-- start cellphone -->
+                <div class="cellphone hidden-xs">
+                  <p><span class="fa fa-phone hidden-xs"></span>0200-6566765</p>
+                </div>
+                <!-- / cellphone -->
+              </div>
+              <!-- / header top left -->
+              <div class="aa-header-top-right">
+                <ul class="aa-head-top-nav-right">
+                  <li><a href="account.html">My Account</a></li>
+                  <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
+                  <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
+                  <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
+                  <li class="hidden-xs"><a href="product.html">Products</a></li>
+                  <li id="signup"><a href="signup.html">SignUp</a></li>
+                  <li id="login"><a href="login.html">Login</a></li>
+                  <!-- <li id="logout"><a href="logout.html">Logout</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- / header top  -->
+    <!-- start header bottom  -->
+    <div class="aa-header-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-header-bottom-area">
+              <!-- logo  -->
+              <div class="aa-logo">
+                <!-- Text based logo -->
+                <a href="index.html">
+                  <span class="fa fa-shopping-cart"></span>
+                  <p>Shop<strong style="color: red;">io</strong> <span>Your Shopping Partner</span></p>
+                </a>
+              </div>
+              <!-- / logo  -->
+
+              <!-- cart box -->
+              <div class="aa-cartbox">
+                <a class="aa-cart-link" href="#">
+                  <span class="fa fa-shopping-basket"></span>
+                  <span class="aa-cart-title">SHOPPING CART</span>
+                  <span class="aa-cart-notify">0</span>
+                </a>
+              </div>
+
+              <!-- search box -->
+              <div class="aa-search-box">
+                <form action="">
+                  <input type="text" name="" id="" placeholder="Search here ">
+                  <button type="submit"><span class="fa fa-search"></span></button>
+                </form>
+              </div>
+              <!-- / search box -->
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / header bottom  -->
+
+
+  </header>
+
+  <div class="nav_section" style="background-color: yellow;">
+    <section class="header1">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+          <!-- <a class="navbar-brand" href="#"><span style="color:whitesmoke;">Shop<span
+                style="color: yellow;">io</span></span></a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home </a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Electronic Devices
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Smart Phone</a></li>
+                  <li><a class="dropdown-item" href="#">Laptop</a></li>
+                  <li><a class="dropdown-item" href="#">Tablets</a></li>
+                  <li><a class="dropdown-item" href="#">Desktop</a></li>
+                  <li><a class="dropdown-item" href="#">Smart Watches</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Electronic Accessories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Mobile Accessories</a></li>
+                  <li><a class="dropdown-item" href="#">HeadPhone and Handsets</a></li>
+                  <li><a class="dropdown-item" href="#">Computer Components</a></li>
+
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a> <i class="fas fa-shopping-cart"></i> </a>
+              </li>
+              <li class="nav-item">
+                <a> <i class="fas fa-user"></i> </a>
+              </li> -->
+            </ul>
+
+          </div>
+        </nav>
+      </div>
+    </section>
+  </div>
+
+  <!-- slider -->
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://icms-image.slatic.net/images/ims-web/6f0f408d-fc1a-4655-83a8-0b8c0a8cbe8d.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p> -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/hot deal.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p> -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/low price.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/card.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- main area -->
+  <section class="products">
+    <div class="container" style="border: 2px solid orange;">
+      <h2>
+        Featured Products
+      </h2>
+      <!-- <div class="card-group"> -->
+      <center>
+        <div class="row row-cols-3 row-cols-md-4 row-cols-sm-6">
+          <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m3')">
+            <img src="images/buy-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p>
+                T-Shirt
+              </p>
+              <h1 style="color: #f57224; font-size: 18px;">
+                RS: 500
+              </h1>
+              <span style="color: #f5bd1f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+
+              <a style="color: #f57224; font-size: 18px;" class="">
+                View Detail
+              </a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 10rem;">
+            <img width="10rem" src="images/buy-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p>Shoes</p>
+              <h1 style="color: #f57224; font-size: 18px;">
+                RS: 1,780
+              </h1>
+              <span style="color: #f5bd1f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+
+              <a style="color: #f57224; font-size: 18px;" class="">
+                View Detail
+              </a>
+            </div>
+          </div>
+
+
+          <div class="card" style="width: 10rem;">
+            <img src="images/buy-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p>Pent </p>
+              <h1 style="color: #f57224; font-size: 18px;">
+                RS: 1,600
+              </h1>
+              <span style="color: #f5bd1f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+
+              <a style="color: #f57224; font-size: 18px;" class="">
+                View Detail
+              </a>
+            </div>
+          </div>
+
+
+          <div class="card" style="width: 10rem;">
+            <img src="images/product-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p>
+                T-Shirt
+              </p>
+              <h1 style="color: #f57224; font-size: 18px;">
+                RS: 500
+              </h1>
+              <span style="color: #f5bd1f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+
+              <a style="color: #f57224; font-size: 18px;" class="">
+                View Detail
+              </a>
+            </div>
+          </div>
+
+        
+        </div>
+      </center>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="container" style="border: 2px solid orange;">
+      <h2>
+        PopularProducts
+      </h2>
+      <!-- <div class="card-group"> -->
+      <center>
+        <div class="row row-cols-3 row-cols-md-4 row-cols-sm-6">
+
+         
+
+
+
+          <div class="card" style="width: 10rem;">
+            <img src="https://static-01.daraz.pk/p/def0b2acbe5bfc7d92c09b5f5e1a963c.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p>
+                ECO Star LED TV
+              </p>
+              <h1 style="color: #f57224; font-size: 18px;">
+                RS: 33,000
+              </h1>
+             
+            </div>
+          </div>
+
+
+
+          <div class="card" style="width: 10rem;">
+            <img src="https://static-01.daraz.pk/p/8acb2fb16004c1b2a947b77d4c40c7a8.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p>TV Remote Controller</p>
+              <h1 style="color: #f57224; font-size: 18px;">
+                RS: 175
+              </h1>
+             
+
+            </div>
+          </div>
+
+
+
+
+          <div class="card" style="width: 10rem;">
+            <img src="https://static-01.daraz.pk/p/13fc28dac4717e35b99c01b749f4e94e.jpg
+          class=" card-img-top" alt="...">
+            <div class="card-body">
+              <p>
+                Samsung Galaxy
+              </p>
+              <h1 style="color: #f57224; font-size: 18px;">
+                RS: 60,000
+              </h1>
+             
+            </div>
+          </div>
+
+
+
+
+          <div class="card" style="width: 10rem;">
+            <img src="https://static-01.daraz.pk/p/a544c980f08e95541f3fad114a5a1f13.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p>
+                PSP Sony Games
+              </p>
+              <h1 style="color: #f57224; font-size: 18px;">
+                RS: 10,000
+              </h1>
+             
+            </div>
+          </div>
+        </div>
+      </center>
+    </div>
+  </section>
+
+
+  <!-- deals -->
+  <div class="deals">
+    <div class="container ">
+
+      <div class="row p-4">
+        <div class=" col-lg-4 col-md-4 col-sm-12">
+          <h1 class="text-center m-5 text-white" style="font-size: 50px;">
+            Deals
+            of<br>
+            the
+            Day
+
+
+          </h1>
+
+
+        </div>
+
+
+
+
+        <div class="col-lg-8 col-md-8 col-sm-12">
+          <div class="row">
+            <div class="card">
+              <img src="https://blogimage.vantagefit.io/vfitimages/2020/09/samsung-watch.png" class="card-img-top"
+                alt="...">
+              <div class="card-body">
+                <p class="card-text" style="font-weight: bold;">D20 Bluetooth Smart Watch Waterproof Sport Fitness</p>
+
+                <h1 style="color: #f57224; font-size: 18px;">
+                  RS: 1399
+                </h1>
+                <span style="color: #f5bd1f;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+            </div>
+
+
+            <div class="card" style="width: 25rem;">
+              <img width="100" src="https://static-01.daraz.pk/p/8b544ba47df959f278375533fe974236.png"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text" style="font-weight: bold;">D20 Bluetooth Smart Watch Waterproof Sport Fitness</p>
+
+                <h1 style="color: #f57224; font-size: 18px;">
+                  RS: 1399
+                </h1>
+                <span style="color: #f5bd1f;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+            </div>
+
+
+            <div class="card" style="width: 40px;">
+              <img src="https://static-01.daraz.pk/p/261296eb55baf1fbf4c929cba7285e79.jpg" class="card-img-top"
+                alt="...">
+              <div class="card-body">
+                <p class="card-text" style="font-weight: bold;">D20 Bluetooth Smart Watch Waterproof Sport Fitness</p>
+
+                <h1 style="color: #f57224; font-size: 18px;">
+                  RS: 1399
+                </h1>
+                <span style="color: #f5bd1f;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+            </div>
+
+
+
+            <div class="card" style="width: 40px;">
+              <img src="https://static-01.daraz.pk/p/a75e169c896455e9a54f82f0d8b6d019.jpg" <div class="card-body">
+              <p class="card-text" style="font-weight: bold;">D20 Bluetooth Smart Watch Waterproof Sport Fitness</p>
+
+              <h1 style="color: #f57224; font-size: 18px;">
+                RS: 1399
+              </h1>
+              <span style="color: #f5bd1f;">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top"
+        src="https://www.luluhypermarket.in/medias/1016703-03.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w1ODI3MHxpbWFnZS9qcGVnfGg0Ny9oZTEvODk2NzMzNjkxOTA3MC8xMDE2NzAzLTAzLmpwZ18xMjAwV3gxMjAwSHw0OTQ2MjlkN2IyOWUzYjZhZjkyYmE1YWM3ZjcwYmQxMzE1MGZlNzkyMmU2NzNjNDBkZjFmM2M5NzY2MDI3M2Yz"
+        alt="Card image cap">
+    </div>
+
+    <div class="card">
+      <img class="card-img-top"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1nUYLxIMeiW9Qp8moNMMXPfoAz02fEGmf1w&usqp=CAU"
+        alt="Card image cap">
+    </div>
+
+    <div class="card">
+      <img class="card-img-top"
+        src="https://png.pngitem.com/pimgs/s/509-5092096_offering-high-quality-mobile-repair-service-main-image.png"
+        alt="Card image cap">
+    </div>
+
+  </div>
+
+  <!-- footer -->
+
+  <footer id="aa-footer">
+    <!-- footer bottom -->
+    <div class="aa-footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-footer-top-area">
+              <div class="row">
+                <div class="col-md-2 col-sm-6">
+                  <div class="aa-footer-widget">
+                    <h3>Shopio</h3>
+                    <p style="color: #888;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere consequatur
+                      veritatis porro, eius sint aperiam! Porro incidunt </p>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="aa-footer-widget">
+                    <div class="aa-footer-widget">
+                      <h3>Privacy Policy</h3>
+                      <ul class="aa-footer-nav">
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Discount</a></li>
+                        <li><a href="#">Special Offer</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="aa-footer-widget">
+                    <div class="aa-footer-widget">
+                      <h3>Company</h3>
+                      <ul class="aa-footer-nav">
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Suppliers</a></li>
+                        <li><a href="#">FAQ</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-6">
+                  <div class="aa-footer-widget">
+                    <div class="aa-footer-widget">
+                      <h3>Subscribe</h3>
+                      <form action="">
+                        <input type="text" name="" id="" placeholder="Your Email Address  ">
+                        <button type="submit"
+                          style="background-color: rgb(43, 160, 238); color: whitesmoke; padding: 8px; border-radius: 30%; margin: 10px;">Submit</span></button>
+                      </form>
+                      <p style="color: #888;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer-bottom -->
+    <div class="aa-footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-footer-bottom-area">
+              <p class="text-center" style="color: #888;">
+                CopyRight @ All Rights Reserved
+              </p>
+              <div class="aa-footer-payment">
+                <span class="fa fa-cc-mastercard"></span>
+                <span class="fa fa-cc-visa"></span>
+                <span class="fa fa-paypal"></span>
+                <span class="fa fa-cc-discover"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- / footer -->
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    setTimeout(function () {
+      $('.loader').fadeToggle();
+    }, 1000);
+  </script>
+  <script src="index.js">
+
+  </script>
+</body>
+
+</html>
