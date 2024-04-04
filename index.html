@@ -45,9 +45,7 @@
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
                   <li><a href="account.html">My Account</a></li>
-                  <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
-                  <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
-                  <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
+                  <!-- <li class="hidden-xs"><a href="cart.html ">My Cart</a></li> -->
                   <li class="hidden-xs"><a href="product.html">Products</a></li>
                   <li id="signup"><a href="signup.html">SignUp</a></li>
                   <li id="login"><a href="login.html">Login</a></li>
@@ -229,13 +227,19 @@
   <!-- main area -->
   <section class="products">
     <div class="container" style="border: 2px solid orange;">
-      <h2>
+      <h2 style="text-align: center; margin-top: 30px;">
         Featured Products
       </h2>
       <!-- <div class="card-group"> -->
-      <center>
-        <div class="row row-cols-3 row-cols-md-4 row-cols-sm-6">
-          <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m3')">
+     
+        <!-- <div class="row"> -->
+        <div  class="row" id="products-container" style=" column-gap: 60px; margin-left: 6px; margin-top: 30px;">
+         
+         
+         
+         
+         
+          <!-- <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m3')">
             <img src="images/buy-1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p>
@@ -252,13 +256,13 @@
                 <i class="fas fa-star"></i>
               </span>
 
-              <a style="color: #f57224; font-size: 18px;" class="">
+              <a style="color: #f57224; font-size: 18px;" class="add-cart">
                 View Detail
               </a>
             </div>
           </div>
 
-          <div class="card" style="width: 10rem;">
+          <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m4')">
             <img width="10rem" src="images/buy-2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p>Shoes</p>
@@ -273,14 +277,14 @@
                 <i class="fas fa-star"></i>
               </span>
 
-              <a style="color: #f57224; font-size: 18px;" class="">
+              <a style="color: #f57224; font-size: 18px;" class="add-cart">
                 View Detail
               </a>
             </div>
           </div>
 
 
-          <div class="card" style="width: 10rem;">
+          <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m5')">
             <img src="images/buy-3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p>Pent </p>
@@ -295,14 +299,14 @@
                 <i class="fas fa-star"></i>
               </span>
 
-              <a style="color: #f57224; font-size: 18px;" class="">
+              <a style="color: #f57224; font-size: 18px;" class="add-cart">
                 View Detail
               </a>
             </div>
           </div>
 
 
-          <div class="card" style="width: 10rem;">
+          <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m2')">
             <img src="images/product-4.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <p>
@@ -319,26 +323,28 @@
                 <i class="fas fa-star"></i>
               </span>
 
-              <a style="color: #f57224; font-size: 18px;" class="">
+              <a style="color: #f57224; font-size: 18px;" class="add-cart">
                 View Detail
               </a>
             </div>
-          </div>
+          </div> -->
 
         
         </div>
-      </center>
+        <!-- </div> -->
+      
+    
     </div>
   </section>
 
   <section class="products">
     <div class="container" style="border: 2px solid orange;">
-      <h2>
+      <h2 style="text-align: center; margin-top: 30px;">
         PopularProducts
       </h2>
       <!-- <div class="card-group"> -->
       <center>
-        <div class="row row-cols-3 row-cols-md-4 row-cols-sm-6">
+        <div class="row row-cols-3 row-cols-md-4 row-cols-sm-6" style="column-gap: 60px; margin-left: 65px; margin-top: 30px;">
 
          
 
@@ -410,7 +416,7 @@
 
 
   <!-- deals -->
-  <div class="deals">
+  <div class="deals" style="margin-top: 20px;">
     <div class="container ">
 
       <div class="row p-4">
@@ -430,7 +436,7 @@
 
 
 
-        <div class="col-lg-8 col-md-8 col-sm-12">
+        <div class="col-lg-8 col-md-8 col-sm-12" style="column-gap: 80px; margin-top: 30px;">
           <div class="row">
             <div class="card">
               <img src="https://blogimage.vantagefit.io/vfitimages/2020/09/samsung-watch.png" class="card-img-top"

@@ -98,37 +98,48 @@
 
     <script>
         // Define product data as a JavaScript object (similar to the one in your previous code)
-        var products = {
-            'm1': {
-                'name': 'Redmi 9C',
-                'price': 'RS: 17,695',
-                'image': 'images/m1.jpg',
-                // Add more details if needed
-            },
-            'm2': {
-                'name': 'USB Wired Mouse',
-                'price': 'RS: 1,780',
-                'image': 'https://static-01.daraz.pk/p/e857fd3d6c1cfb8de437e624d0840264.jpg',
-                // Add more details if needed
-            },
-            'm3': {
-                'name': 'T-Shirt',
-                'price': 'RS: 500',
-                'image': 'images/buy-1.jpg',
-                // Add more details if needed
-            },
-            'm4': {
-                'name': 'T-Shirt',
-                'price': 'RS: 500',
-                'image': 'images/product-6.jpg',
-                // Add more details if needed
-            },
-            // Add more products as needed
-        };
-
+       
+const demoData = [
+    {
+          name: "Watch",
+          price: 1765,
+          image: "images/product-8.jpg",
+      },
+       {
+          name: "T-Shirt",
+          price: 500,
+          image: "images/product-1.jpg",
+          // Add more details if needed
+      },
+       {
+          name: "T-Shirt",
+          price: 500,
+          image: "images/product-6.jpg",
+          // Add more details if needed
+      },
+      {
+          name: "T-Shirt",
+          price: 500,
+          image: "images/product-4.jpg",
+          // Add more details if needed
+      },
+       {
+          name: "Shoes",
+          price: 1780,
+          image: "images/product-2.jpg",
+          // Add more details if needed
+      },
+       {
+          name: "Pent",
+          price: 1600,
+          image: "images/product-3.jpg",
+          // Add more details if needed
+      },
+      // Add more products as needed
+  ];
         // Function to display product details based on product ID
         function displayProductDetails(productId) {
-            var product = products[productId];
+            var product = demoData[productId];
             if (product) {
                 var html = `
                 <div class="row">
@@ -166,7 +177,7 @@
             productNumber = parseInt(productNumber);
             console.log('productId:', productId);
             if (productId) {
-                var product = products[productId];
+                var product = demoData[productId];
                 if (product) {
                     // Simulate adding the product to the cart (you can customize this part)
                     alert("Product added to cart: " + product.name);
