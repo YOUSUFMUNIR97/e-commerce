@@ -49,7 +49,7 @@
                   <li class="hidden-xs"><a href="product.html">Products</a></li>
                   <li id="signup"><a href="signup.html">SignUp</a></li>
                   <li id="login"><a href="login.html">Login</a></li>
-                  <!-- <li id="logout"><a href="logout.html">Logout</a></li> -->
+                  <li id="logout" onclick=logout()><a href="">Logout</a></li>
                 </ul>
               </div>
             </div>
@@ -77,7 +77,7 @@
 
               <!-- cart box -->
               <div class="aa-cartbox">
-                <a class="aa-cart-link" href="#">
+                <a class="aa-cart-link" href="./cart.html">
                   <span class="fa fa-shopping-basket"></span>
                   <span class="aa-cart-title">SHOPPING CART</span>
                   <span class="aa-cart-notify">0</span>
@@ -230,110 +230,8 @@
       <h2 style="text-align: center; margin-top: 30px;">
         Featured Products
       </h2>
-      <!-- <div class="card-group"> -->
-     
-        <!-- <div class="row"> -->
-        <div  class="row" id="products-container" style=" column-gap: 60px; margin-left: 6px; margin-top: 30px;">
-         
-         
-         
-         
-         
-          <!-- <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m3')">
-            <img src="images/buy-1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p>
-                T-Shirt
-              </p>
-              <h1 style="color: #f57224; font-size: 18px;">
-                RS: 500
-              </h1>
-              <span style="color: #f5bd1f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </span>
-
-              <a style="color: #f57224; font-size: 18px;" class="add-cart">
-                View Detail
-              </a>
-            </div>
-          </div>
-
-          <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m4')">
-            <img width="10rem" src="images/buy-2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p>Shoes</p>
-              <h1 style="color: #f57224; font-size: 18px;">
-                RS: 1,780
-              </h1>
-              <span style="color: #f5bd1f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </span>
-
-              <a style="color: #f57224; font-size: 18px;" class="add-cart">
-                View Detail
-              </a>
-            </div>
-          </div>
-
-
-          <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m5')">
-            <img src="images/buy-3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p>Pent </p>
-              <h1 style="color: #f57224; font-size: 18px;">
-                RS: 1,600
-              </h1>
-              <span style="color: #f5bd1f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </span>
-
-              <a style="color: #f57224; font-size: 18px;" class="add-cart">
-                View Detail
-              </a>
-            </div>
-          </div>
-
-
-          <div class="card" style="width: 10rem;" onclick="redirectToProductDetails('m2')">
-            <img src="images/product-4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p>
-                T-Shirt
-              </p>
-              <h1 style="color: #f57224; font-size: 18px;">
-                RS: 500
-              </h1>
-              <span style="color: #f5bd1f;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </span>
-
-              <a style="color: #f57224; font-size: 18px;" class="add-cart">
-                View Detail
-              </a>
-            </div>
-          </div> -->
-
-        
-        </div>
-        <!-- </div> -->
-      
-    
+      <div class="row" id="products-container" style=" column-gap: 60px; margin-left: 6px; margin-top: 30px;">
+      </div>
     </div>
   </section>
 
@@ -344,9 +242,10 @@
       </h2>
       <!-- <div class="card-group"> -->
       <center>
-        <div class="row row-cols-3 row-cols-md-4 row-cols-sm-6" style="column-gap: 60px; margin-left: 65px; margin-top: 30px;">
+        <div class="row row-cols-3 row-cols-md-4 row-cols-sm-6"
+          style="column-gap: 60px; margin-left: 65px; margin-top: 30px;">
 
-         
+
 
 
 
@@ -359,7 +258,7 @@
               <h1 style="color: #f57224; font-size: 18px;">
                 RS: 33,000
               </h1>
-             
+
             </div>
           </div>
 
@@ -372,7 +271,7 @@
               <h1 style="color: #f57224; font-size: 18px;">
                 RS: 175
               </h1>
-             
+
 
             </div>
           </div>
@@ -390,7 +289,7 @@
               <h1 style="color: #f57224; font-size: 18px;">
                 RS: 60,000
               </h1>
-             
+
             </div>
           </div>
 
@@ -406,7 +305,7 @@
               <h1 style="color: #f57224; font-size: 18px;">
                 RS: 10,000
               </h1>
-             
+
             </div>
           </div>
         </div>

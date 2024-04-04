@@ -20,7 +20,7 @@
     <title>Product Detail</title>
 </head>
 
-<body style="background-color: rgb(244, 250, 250);">
+<body style="background-color: rgb(244, 250, 250); margin-top: -50px;">
     <!-- <div class="loader_bg">
         <div class="loader">
            
@@ -37,7 +37,37 @@
     <header id="aa-header">
         <!-- start header top  -->
 
+<!-- start header top  -->
+<div class="aa-header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-top-area">
+            <!-- start header top left -->
+            <div class="aa-header-top-left">
 
+              <!-- start cellphone -->
+              <div class="cellphone hidden-xs">
+                <p><span class="fa fa-phone hidden-xs"></span>0200-6566765</p>
+              </div>
+              <!-- / cellphone -->
+            </div>
+            <!-- / header top left -->
+            <div class="aa-header-top-right">
+              <ul class="aa-head-top-nav-right">
+                <li><a href="account.html">My Account</a></li>
+                <!-- <li class="hidden-xs"><a href="cart.html ">My Cart</a></li> -->
+                <li class="hidden-xs"><a href="product.html">Products</a></li>
+                <li id="signup"><a href="signup.html">SignUp</a></li>
+                <li id="login"><a href="login.html">Login</a></li>
+                <!-- <li id="logout"><a href="logout.html">Logout</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
         <!-- / header top  -->
         <!-- start header bottom  -->
         <div class="aa-header-bottom">
@@ -58,7 +88,7 @@
 
                             <!-- cart box -->
                             <div class="aa-cartbox">
-                                <a class="aa-cart-link" href="#">
+                                <a class="aa-cart-link" href="./cart.html">
                                     <span class="fa fa-shopping-basket"></span>
                                     <span class="aa-cart-title">SHOPPING CART</span>
                                     <span class="aa-cart-notify">0</span>
@@ -98,45 +128,45 @@
 
     <script>
         // Define product data as a JavaScript object (similar to the one in your previous code)
-       
-const demoData = [
-    {
-          name: "Watch",
-          price: 1765,
-          image: "images/product-8.jpg",
-      },
-       {
-          name: "T-Shirt",
-          price: 500,
-          image: "images/product-1.jpg",
-          // Add more details if needed
-      },
-       {
-          name: "T-Shirt",
-          price: 500,
-          image: "images/product-6.jpg",
-          // Add more details if needed
-      },
-      {
-          name: "T-Shirt",
-          price: 500,
-          image: "images/product-4.jpg",
-          // Add more details if needed
-      },
-       {
-          name: "Shoes",
-          price: 1780,
-          image: "images/product-2.jpg",
-          // Add more details if needed
-      },
-       {
-          name: "Pent",
-          price: 1600,
-          image: "images/product-3.jpg",
-          // Add more details if needed
-      },
-      // Add more products as needed
-  ];
+
+        const demoData = [
+            {
+                name: "Watch",
+                price: 1765,
+                image: "images/product-8.jpg",
+            },
+            {
+                name: "T-Shirt",
+                price: 500,
+                image: "images/product-1.jpg",
+                // Add more details if needed
+            },
+            {
+                name: "T-Shirt",
+                price: 500,
+                image: "images/product-6.jpg",
+                // Add more details if needed
+            },
+            {
+                name: "T-Shirt",
+                price: 500,
+                image: "images/product-4.jpg",
+                // Add more details if needed
+            },
+            {
+                name: "Shoes",
+                price: 1780,
+                image: "images/product-2.jpg",
+                // Add more details if needed
+            },
+            {
+                name: "Pent",
+                price: 1600,
+                image: "images/product-3.jpg",
+                // Add more details if needed
+            },
+            // Add more products as needed
+        ];
         // Function to display product details based on product ID
         function displayProductDetails(productId) {
             var product = demoData[productId];
@@ -173,6 +203,7 @@ const demoData = [
             // Debugging: Log productId to check its value
             var productId = localStorage.getItem('productId');
             var Cart = localStorage.setItem('CartAdded', productId);
+
             let productNumber = localStorage.getItem('cartNumber')
             productNumber = parseInt(productNumber);
             console.log('productId:', productId);
@@ -187,20 +218,8 @@ const demoData = [
             } else {
                 alert("No product selected");
             }
-            if (productNumber) {
-                localStorage.setItem('cartNumber', productNumber + 1);
-                document.querySelector('.aa-cart-notify').textContent = productNumber + 1;
-            }
-            else {
-                localStorage.setItem('cartNumber', 1);
-                document.querySelector('.aa-cart-notify').textContent = 1;
-            }
-
             setItems(product);
-
-
-
-
+            window.location.reload(); // Refresh the page
         }
         // Retrieve the product ID from localStorage
         var productId = localStorage.getItem('productId');
@@ -216,20 +235,40 @@ const demoData = [
         function setItems(product) {
             console.log("Inside cart item");
             console.log("product click is", product);
-            product.inCart = 1;
+            const cartNo = localStorage.getItem('cartNumber')
 
+            // Retrieve cart data from localStorage
+            let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+
+            // Create an object for the new product
+            let cartProduct = {
+                no: cartNo,
+                name: product.name,
+                price: product.price,
+                image: product.image
+            };
+
+            // Add the new product to the cartData array
+            cartData.push(cartProduct);
+
+            // Update the cartData in localStorage
+            localStorage.setItem("cartData", JSON.stringify(cartData));
+
+            // Notify the user
+            alert(product.name + " Added to Cart");
+            console.log(cartData);
         }
 
         function onLoadCartNumber() {
-            productNumber = localStorage.getItem('cartNumber');
+            let inCart = JSON.parse(localStorage.getItem("cartData")) || [];
+            let productNumber = inCart.length; // Get the total number of items in the cart
             if (productNumber) {
-                document.querySelector('.aa-cart-notify').textContent = productNumber;
+                document.querySelector('.aa-cart-notify').textContent = productNumber; // Update the cart number element
             }
-
-
         }
 
         onLoadCartNumber();
+
 
 
     </script>
