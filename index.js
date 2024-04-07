@@ -39,51 +39,10 @@ const demoData = [
 ];
 
 
-function signup(e) {
-    console.log('working');
-    const form = document.getElementById('form').value;
-    const username = document.getElementById('username').value;
-    const city = document.getElementById('city').value;
-    const number = document.getElementById('number').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
 
-    var user = {
-        email: email,
-        username: username,
-        password: password
-    };
 
-    var json = JSON.stringify(user);
-    localStorage.setItem("username", json)
-    alert("Welcom" + username + "you are succefully registered");
-}
 
-function login(e) {
-    const form = document.getElementById('form').value;
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
 
-    var user = localStorage.getItem('username')
-    var data = JSON.parse(user);
-    console.log(data);
-
-    if (username !== data.username) {
-        alert('Please Signup')
-    }
-
-    else if (username == data.username && password == data.password) {
-        alert('Welcome')
-    }
-
-    else if (password == null) {
-        alert("Plese Enter Password")
-    }
-
-    else {
-        alert('Wrong Password')
-    }
-}
 
 
 
@@ -166,20 +125,23 @@ for (let i = 0; i < productpage.length; i++) {
 
 
 function cartNumbers(product) {
-    let productNumber = localStorage.getItem('cartNumber')
-    productNumber = parseInt(productNumber);
-    if (productNumber) {
-        localStorage.setItem('cartNumber', productNumber + 1);
-        document.querySelector('.aa-cart-notify').textContent = productNumber + 1;
-    }
-    else {
-        localStorage.setItem('cartNumber', 1);
-        document.querySelector('.aa-cart-notify').textContent = 1;
+    let isLoggedIn = true; // Assuming this variable indicates whether the user is logged in or not
+
+    if (isLoggedIn) {
+        let productNumber = localStorage.getItem('cartNumber');
+        productNumber = parseInt(productNumber);
+        if (productNumber) {
+            localStorage.setItem('cartNumber', productNumber + 1);
+            document.querySelector('.aa-cart-notify').textContent = productNumber + 1;
+        } else {
+            localStorage.setItem('cartNumber', 1);
+            document.querySelector('.aa-cart-notify').textContent = 1;
+        }
     }
 
     setItems(product);
-
 }
+
 
 function setItems(product) {
     console.log("Inside cart item");
@@ -205,22 +167,28 @@ onLoadCartNumber();
 // Function to generate HTML for each cart product
 function generateCartHTML(cart, index) {
     return `
-    <div class="row m-2" style="border:1px solid black">
-        <div class="col my-4">
-            <img class="" style="width:80%; display: flex; justify-content: flex-start; align-items: center;"  src="${cart.image}" alt="${cart.name}">
+
+
+    
+    <div class="row my-2" style="background-color:pink";>
+    <div class="col" style="display: flex; justify-content: center; align-items: center;">
+    <button class="btn btn-primary btn-block" onClick="removeItem(${index});">Delete</button>
+    </div>
+        
+    
+    <div class="col m-2">
+            <img class="" style="width:30%; display: flex; justify-content: flex-start; align-items: center;"  src="${cart.image}" alt="${cart.name}">
         </div>
         
         <div class="col" style="display: flex; justify-content: flex-start; align-items: center;">
-            <h2>${cart.name}</h2>
+            <h5>${cart.name}</h2>
         </div>
 
-        <div class="col" style="display: flex; justify-content: flex-start; align-items: center;">
+        <div class="col" style="display: flex; justify-content: flex-end; align-items: center;">
             <h5>Price: ${cart.price}</h5>
         </div>
 
-        <div class="col" style="display: flex; justify-content: flex-start; align-items: center;">
-            <button class="btn btn-primary btn-block" onClick="removeItem(${index});">Delete</button>
-        </div>
+       
     </div>
     `;
 }
@@ -235,68 +203,53 @@ function removeItem(index) {
     window.location.reload(); // Refresh the page
 }
 
-
-// Function to render cart items
 function renderCart() {
     const cartContainer = document.getElementById('cart-container');
     let inCart = JSON.parse(localStorage.getItem("cartData")) || [];
-    const cartHTML = inCart.map((cart, index) => generateCartHTML(cart, index)).join('');
     if (cartContainer) {
         if (inCart.length === 0) {
             cartContainer.innerHTML = "Cart is empty";
         } else {
-            cartContainer.innerHTML = cartHTML;
+            // Generate HTML for each cart item
+            const cartHTML = inCart.map((cart, index) => generateCartHTML(cart, index)).join('');
+
+            // Calculate total price
+            const total = calculateTotal(inCart);
+
+            // Add total HTML
+            const totalHTML = `
+                <div class="row my-2">
+                    <div class="col"><h4>Total Price:</h4></div>
+                    <div class="col"></div>
+                    <div class="col text-end">
+                        <h4> Rs: ${total}</h4>
+                    </div>
+                </div>
+            `;
+
+            // Combine cart HTML with total HTML
+            const finalHTML = cartHTML + totalHTML;
+
+            // Set the content of cart container
+            cartContainer.innerHTML = finalHTML;
         }
     } else {
         console.error("Cart container not found.");
     }
 }
 
+// Function to calculate total price of cart items
+function calculateTotal(cart) {
+    let total = 0;
+    cart.forEach(item => {
+        total += item.price;
+    });
+    return total;
+}
+
+
 // Initial rendering of cart items
 renderCart();
 
-
-
-//logout
-function logout() {
-    // add event listener
-    console.log("working");
-  
-  
-    var user = localStorage.removeItem("username");
-    var data = JSON.parse(user);
-    console.log(data)
-    alert("You are successfully logout");
-    check();
-  }
-  
-  function newDoc() {
-    window.location.href = "index.html";
-  }
-  
-
-
-function check() {
-    console.log('page is fully loaded');
-    var user = localStorage.getItem("username");
-    var data = JSON.parse(user);
-    console.log("checking data", data);
-  
-    if (data === null) {
-      document.getElementById("signup").style.display = "block";
-      document.getElementById("login").style.display = "block";
-      document.getElementById("logout").style.display = "none";
-    }
-    else {
-      document.getElementById("signup").style.display = "none";
-      document.getElementById("login").style.display = "none";
-      document.getElementById("logout").style.display = "block";
-    }
-  
-  }
-  
-
-
-window.onload = check();
 
 
