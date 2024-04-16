@@ -108,7 +108,7 @@ for (let i = 0; i < carts.length; i++) {
         };
 
         cartData.push(cartProducts);
-        alert(name + " Added to Cart")
+        // alert(name + " Added to Cart")
         localStorage.setItem("cartData", JSON.stringify(cartData));
 
         redirectToProductDetails(i)
@@ -246,6 +246,8 @@ function calculateTotal(cart) {
     });
     return total;
 }
+
+
 
 
 // Initial rendering of cart items

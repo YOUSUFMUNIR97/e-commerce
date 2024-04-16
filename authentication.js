@@ -1,3 +1,13 @@
+// check(); 
+window.onload = check;
+
+// // Attach event listener for form submission
+// document.getElementById('form').addEventListener('submit', function(e) {
+//     e.preventDefault(); // Prevent form submission
+//     signup(); // Call the signup function
+// });
+
+// Signup function
 function signup(e) {
     console.log('working');
     const form = document.getElementById('form').value;
@@ -25,18 +35,49 @@ function signup(e) {
 
 
 
-function login(username, password) {
+
+
+// // const form = document.getElementById('form').value;
+// document.getElementById('form').addEventListener('submit', function(e) {
+//     e.preventDefault(); // Prevent form submission
+
+//     // Retrieve username and password from form fields
+//     const form = document.getElementById('form').value;
+//     const username = document.getElementById('username').value;
+//     const password = document.getElementById('password').value;
+
+//     // Retrieve registered users' data from localStorage
+//     const registerUsers = JSON.parse(localStorage.getItem('registerUsers')) || [];
+
+//     // Find user in registerUsers array
+//     const user = registerUsers.find(user => user.username === username);
+
+//     if (!user) {
+//         alert('Please Signup First');
+//     } else if (user.password === password) {
+//         // Redirect to productdetail.html upon successful login
+//         window.location.href = './index.html';
+//         alert(`Welcome, ${user.username} you are successfully logged in`);
+//         // Optionally, you can store the active user in localStorage
+//         localStorage.setItem("activeUser", JSON.stringify(user));
+//     } else {
+//         alert('Wrong Password');
+//     }
+
+
+// });
+
+
+
+function login(e) {
 
     document.getElementById('form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent form submission
-    
+    e.preventDefault();
         // Retrieve username and password from form fields
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
     
-        // Your login logic goes here
-        login(username, password);
-    });
+   
     // Retrieve registered users' data from localStorage
     const registerUsers = JSON.parse(localStorage.getItem('registerUsers')) || [];
 
@@ -55,6 +96,9 @@ function login(username, password) {
         alert('Wrong Password');
     }
 }
+)};
+
+
 
 
 
@@ -73,30 +117,29 @@ function logout() {
     var data = JSON.parse(user);
     console.log(data)
     alert("You are successfully logout");
-    check();
 }
-
 
 
 
 function check() {
-    console.log('page is fully loaded');
+    console.log('Checking user status...');
     var user = localStorage.getItem("activeUser");
-    var data = JSON.parse(user);
-    console.log("checking data", data);
 
-    if (data === null) {
-        document.getElementById("signup").style.display = "contents";
-        document.getElementById("login").style.display = "contents";
-        document.getElementById("logout").style.display = "none";
-    }
-    else {
+    if (user) {
         document.getElementById("signup").style.display = "none";
         document.getElementById("login").style.display = "none";
-        document.getElementById("logout").style.display = "contents";
+        document.getElementById("logout").style.display = "inline";
+        console.log("User is logged in");
+    } else {
+        document.getElementById("signup").style.display = "inline";
+        document.getElementById("login").style.display = "inline";
+        document.getElementById("logout").style.display = "none";
+        console.log("User is not logged in");
     }
-
 }
+
+  
+
 
 
 function onLoadCartNumber() {
@@ -107,7 +150,6 @@ function onLoadCartNumber() {
     }
 }
 
-
-window.onload = check();
+// window.onload = check;
 
 

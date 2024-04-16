@@ -14,47 +14,27 @@
 
 <body>
   <header id="aa-header" style="background-color: white;">
-    <div class="aa-header-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="aa-header-bottom-area">
-              <!-- logo  -->
-              <div class="aa-logo">
-                <!-- Text based logo -->
-                <a href="index.html">
-                  <span class="fa fa-shopping-cart"></span>
-                  <p>Shop<strong style="color: red;">io</strong> <span>Your Shopping Partner</span></p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- / header bottom  -->
+    <!-- Header content -->
   </header>
   <div class="mainform">
-    <form class="form" id="form" onsubmit="signup()" action="login.html">
+    <form class="form" id="form"  onsubmit="signup()" action="login.html">
       <div class="spacer-30"></div>
       <div class="container">
         <h1 class="text-center">SignUp</h1>
         <div class="mb-3">
           <label for="username" class="form-label">Name:</label>
-          <input type="name" class="form-control" id="username" aria-describedby="emailHelp">
+          <input type="name" class="form-control" id="username" aria-describedby="emailHelp" required>
         </div>
-
         <div class="mb-3">
           <label for="email" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password">
+          <input type="password" class="form-control" id="password" required>
         </div>
-
-        <button type="submit" class="btn btn-primary" onclick="index.html">Submit</button>
-        <p class="text-center">Aready a member? <a href="login.html">Login</a></p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p class="text-center">Already a member? <a href="login.html">Login</a></p>
       </div>
     </form>
   </div>
@@ -62,19 +42,8 @@
 
 <script src="authentication.js">
 
-
-
-  // define function
-
-  //   function validate(){
-  //   // const username= username.value;
-  // const city= city.value;
-  // const number = number.value;
-  // const email = email.value;
-  // const password = passwrd.value;
-  // }
-
-
 </script>
+
+
 
 </html>
